@@ -1,0 +1,42 @@
+.Titlebox{
+    background-color: aqua;
+
+}
+Titlebox h1{
+        margin-left:auto;
+        margin-right:auto;
+        text-align: auto;
+}
+.Body{
+    background-color:red;
+    height: 400px;
+    color: white;
+}
+h1{
+    padding: 10px;
+  border: 3px solid #00C969;
+  margin-left:auto;
+  margin-right:auto;
+}
+.Page{
+    background-image: url("http://i.imgur.com/5by8GJs.jpg");
+}
+@font-face {
+  font-family: 'Shift';
+  font-style: normal;
+  font-weight: normal;
+  src: url("http://s3.amazonaws.com/codecademy-content/courses/ltp/fonts/shift.woff") format("woff");
+}
+@font-face {
+  font-family: 'Shift';
+  font-style: normal;
+  font-weight: bold;
+  src: url("http://s3.amazonaws.com/codecademy-content/courses/ltp/fonts/shift-bold.woff") format("woff");
+}
+p{
+    
+}
+
+body{
+    background-image: url("http://i.imgur.com/5by8GJs.jpg");
+}

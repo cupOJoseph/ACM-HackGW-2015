@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hack GW </title>
+        
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+        
+    </head>
+    
+    <script type="text/javascript">
+function CalcPer(){
+   var data = document.getElementById("form");
+   var per = data.elements[0].value / data.elements[1].value;
+   var text = "";
+   per = per.toFixed(2);
+   text += "You should spend $" + per + " per day." + "<br>";
+   
+   if(per >= 100){
+       text += "You should eat some prime rib and veal cutlets.";
+   }else if(per >= 25){
+       text += "You should eat a sandwich from Jetties. Call (202) 380-9272";
+   }else if(per >= 15){
+       text += "You should eat some Chinese Food at One Fish, Two Fish. Call (202) 822-0977";
+   }else if(per >= 10){
+       text += "You should eat some burritos from Baja Fresh. Call (202) 380-9272";
+   }else if(per >=5){
+       text += "You should eat some Peanut Butter & Jelly sandwiches";
+   }else if(per > 1){
+       text += "You should start rationing food.";
+   }else if(per > 0){
+       text += "You should eat a peanut."
+   }else if(per ==0){
+       text += "You should eat some air."
+   }
+   else if(per < 0){
+       text += "You should get out of debt.";
+   }
+   document.getElementById("Spendresult").innerHTML = text;
+}
+
+function CalcLast(){
+    var info = document.getElementById("form2");
+    var left = 1; left = info.elements[1].value;
+    var total = 1; total = info.elements[0].value; 
+    total = +info.elements[1].value + +info.elements[0].value;
+    total = left/total * info.elements[2].value;
+    total = +info.elements[2].value - total;
+    total = total.toFixed(2);
+    
+    
+    var text = "";
+     
+    text+= "$" + info.elements[0].value +  " of groceries should last you " + total + " days.";
+    document.getElementById("groceriesResult").innerHTML = text;
+    
+}
+</script>
+    
+    <body>
+            <h1>Hack GW 2015 - by Joseph Schiarizzi</h1>
+            <p>Calculate how much money should you spend today.</p>
+            <form id="form" action="javascript:CalcPer();">
+                Money left in account:  <input type="number" name="first_name" />
+                <br>
+                Days left in semester:    <input type="number" name="last_name" />
+                <p>Unsure how many days? Try <a href="http://days.to/until/18-december">this website.</a></p>
+                <input type="submit" name="submit" value="Submit" />
+            </form>
+            <p id="Spendresult"></p>
+            
+            <br>
+            
+            <p>Calculate how long groceries should last.</p>
+             <form id="form2" action="javascript:CalcLast();">
+              Money spent on groceries:  <input type="number" name="spent" />
+              <br>
+              Money left in account:  <input type="number" name="cashleft" />
+              <br>
+              Days left in semester:    <input type="number" name="time" />
+              <br>
+                <input type="submit" name="submit" value="Submit" />
+            </form>
+            <p id="groceriesResult"></p>
+            <br>
+    </body>
+</html>
